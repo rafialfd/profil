@@ -8,28 +8,69 @@ html,
 body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
-.nav {
-  background-color: bisque;
-}
-
-.nama {
+.nav .nama {
   padding: 10px 20px;
-  color: black;
+  color: bisque;
+  position: fixed;
+  z-index: 1001;
+  background-color: black;
+  width: 100%;
+}
+
+.nav .picit {
+  padding: 10px 20px;
+  color: bisque;
+  position: fixed;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  justify-content: end;
+  align-items: end;
+  float: right;
+  width: 100%;
+}
+
+.nav .picit span {
+  padding: 1px 8px;
+  background-color: bisque;
+  margin: 2px;
 }
 
 .navbar {
-  float: right;
-  margin-top: -32px;
-  margin-right: 10px;
+  display: none;
+}
+
+.navbar.active {
+  transition: 0.5s ease-in-out;
+  display: block;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  padding-top: 50px;
 }
 
 .navbar a {
-  margin: 0px 10px;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 600;
+  padding: 10px;
+  color: bisque;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: bisque;
   color: black;
+  transition: 0.5s ease-in-out;
 }
 
 .home {
@@ -51,6 +92,17 @@ body {
   color: bisque;
 }
 
+.home .tulisan p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.profil {
+  background-color: bisque;
+  padding: 40px 0;
+}
 .profil .nama {
   width: 100%;
   text-align: center;
@@ -67,7 +119,6 @@ body {
   position: relative;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
   text-align: left;
   justify-content: center;
 }
@@ -82,14 +133,19 @@ body {
   width: 700px;
   font-size: 120%;
   text-align: center;
+  padding: 0 20px;
 }
 
 .profil .isi h1 {
   margin-bottom: 20px;
 }
+
+.profil .contain .isi p {
+  font-weight: 300;
+}
+
 .prestasi {
   background-color: black;
-  margin-top: 40px;
   padding-bottom: 40px;
 }
 .prestasi .nama {
